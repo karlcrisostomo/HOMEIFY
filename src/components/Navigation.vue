@@ -72,8 +72,6 @@
                     @mouseover="hoveredItemId = navItem.id"
                     @mouseout="hoveredItemId = null"
                     :class="{
-                      'text-gray-500 ':
-                        hoveredItemId && hoveredItemId !== navItem.id,
                       'hover:translate-x-5 hover:transition-transform duration-500 text-3xl  tracking-widest font-light  mb-20':
                         navItem.id,
                     }"

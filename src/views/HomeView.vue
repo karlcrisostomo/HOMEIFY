@@ -1,12 +1,11 @@
 <template>
   <section>
     <div :class="{ 'w-screen h-screen': !isMenuOpen }" ref="containerRef">
-     
-      <headerPage />
-      <CarouselSection/>
-      <TestimonialSection />
-      <WhyChooseUs />
-      <GallerySection class="max-sm:h-full" />
+      <component :is="HeaderPage" />
+      <component :is="CarouselSection" />
+      <component :is="TestimonialSection" />
+      <component :is="WhyChooseUs" id="why-choose-us" />
+      <component :is="FooterSection" />
     </div>
   </section>
 </template>

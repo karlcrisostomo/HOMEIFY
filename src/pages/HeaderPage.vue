@@ -1,5 +1,5 @@
 <template>
-  <div class="text-white h-screen">
+  <div class="text-white h-screen relative">
     <div class="container mx-auto">
       <Navigation />
 

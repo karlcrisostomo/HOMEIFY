@@ -1,6 +1,8 @@
 <template>
-  <div class="text-white container mx-auto relative top-28  p-2 h-screen">
-    <div class="mb-32 font-thin max-sm:text-2xl max-sm:p-2 max-sm:text-center sm:text-4xl sm:text-center md:text-5xl md:text-center xl:text-left xl:max-w-2xl xl:ml-20 ">
+  <div class="text-white container  mx-auto relative top-28 p-2 h-screen">
+    <div
+      class="mb-32 font-thin max-sm:text-2xl max-sm:p-2 max-sm:text-center sm:text-4xl sm:text-center md:text-5xl md:text-center xl:text-left xl:max-w-2xl xl:ml-20"
+    >
       <h1>Experience the Difference</h1>
     </div>
     <Swiper
@@ -21,9 +23,9 @@
             class="max-sm:pt-7 font-light max-sm:mb-9 sm:pt-10 sm:mb-11 md:mb-16"
           >
             <div
-              class="max-sm:text-2xl flex justify-evenly items-center sm:text-2xl  font-thin lg:max-w-md"
+              class="max-sm:text-2xl flex justify-evenly items-center sm:text-2xl font-thin lg:max-w-md"
             >
-              <span class="hidden  sm:block sm:text-sm ">/0{{ image.id }}</span>
+              <span class="hidden sm:block sm:text-sm">/0{{ image.id }}</span>
               <h1>{{ image.title }}</h1>
             </div>
             <div
