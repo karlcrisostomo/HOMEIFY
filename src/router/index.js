@@ -4,6 +4,7 @@ import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import WorksView from '../views/WorksView.vue'
 import ShopView from '../views/ShopView.vue'
+import ErrorView from '../views/ErrorView.vue'
 const routes = [
   {
     path: '/',
@@ -25,6 +26,11 @@ const routes = [
     name: 'about',
     component: AboutView
   },
+  {
+    path: '/error',
+    name: 'error',
+    component: ErrorView
+  }
 ]
 
 const router = createRouter({

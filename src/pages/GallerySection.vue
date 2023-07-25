@@ -18,7 +18,7 @@
         >
           <div class="bg-black relative mb-8 sm:text-sm overflow-hidden">
             <div
-              class="relative hover:scale-125 transition-all ease-in-out duration-300 overflow-hidden w-full"
+              class="relative hover:scale-110 transition-all ease-in-out duration-300 overflow-hidden w-full"
             >
               <img
                 :src="galleryImg.src"
