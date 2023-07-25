@@ -31,7 +31,7 @@
             ></video>
 
             <div
-              class="max-sm:text-5.5xl absolute  bg-black  text-center top-0 left-0 h-full w-full mix-blend-multiply  text-white  sm:text-8xl"
+              class="max-sm:text-5.5xl absolute  bg-black  text-center top-0 left-0 h-full w-full mix-blend-multiply  text-white select-none sm:text-8xl"
             >
               <h1 class="text-center translate-y-1/2">HOMEIFY</h1>
             </div>
