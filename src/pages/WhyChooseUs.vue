@@ -1,7 +1,5 @@
 <template>
-  <div class=" bg-Midnight-Navy text-white font-thin max-sm:p-4 sm:p-5 relative">
-
-
+  <div class="bg-Midnight-Navy text-white font-thin max-sm:p-4 sm:p-5 relative">
     <div
       class="pt-32 max-sm:max-w-md container mx-auto max-sm:p-4 sm:max-w-xl md:max-w-2xl lg:max-w-3xl"
     >
@@ -47,6 +45,7 @@
 
       <div
         class="flex justify-center mt-24 max-sm:text-base sm:text-lg md:text-xl cursor-pointer hover:font-medium transition-all ease-in-ou duration-300"
+        @click="errorPage"
       >
         <div class="flex items-center">
           <h1>More about us</h1>
@@ -59,8 +58,14 @@
 
 <script setup>
 import { ref } from "vue";
-import { useFollowMouse } from "@/composables/customCursor";
+import { useRouter } from "vue-router";
+
 const hoveredItem = ref(null);
+const router = useRouter();
+
+const errorPage = () => {
+  router.push({ name: "error" });
+};
 
 const items = ref([
   {
