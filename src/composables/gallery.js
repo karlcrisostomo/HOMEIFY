@@ -1,5 +1,6 @@
-import { reactive } from "vue";
+import { reactive, ref } from "vue";
 const gallery = require.context("@/assets/images", false, /\.png$/);
+const hoveredImgs = ref(false);
 const galleryImgs = reactive([
   {
     id: 1,
@@ -49,7 +50,7 @@ export default {
   setup() {
     return {
       galleryImgs,
-   
+      hoveredImgs,
     };
   },
 };

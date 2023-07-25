@@ -1,35 +1,56 @@
 <template>
-  <div class="bg-white text-black max-sm:p-4 sm:p-5">
+  <div class=" bg-Midnight-Navy text-white font-thin max-sm:p-4 sm:p-5 relative">
+
+
     <div
       class="pt-32 max-sm:max-w-md container mx-auto max-sm:p-4 sm:max-w-xl md:max-w-2xl lg:max-w-3xl"
     >
       <div
+        class="uppercase max-sm:max-w-md mb-11 sm:max-w-lg sm:mx-auto md:mx-0 md:max-w-xl md:ml-5 lg:max-w-2xl"
+      >
+        <h1>/ why us?</h1>
+      </div>
+
+      <div
         :class="{
-          'border-b-2 border-solid border-Ash-Grey hover:border-black duration-500 ease-in-out max-sm:pb-16 sm:pb-24 max-sm:pt-12 sm:grid sm:grid-cols-2 sm:gap-5 sm:p-6':
+          'border-b-2 border-solid border-Ash-Grey hover:border-white duration-500 ease-in-out max-sm:pb-16 sm:pb-24 max-sm:pt-12 sm:grid sm:grid-cols-2 sm:gap-5 sm:p-6':
             item,
         }"
         v-for="item in items"
         :key="item.id"
+        @mouseenter="hoveredItem = item.id"
+        @mouseleave="hoveredItem = null"
       >
         <div
-          class="mb-7 max-sm:text-3xl max-sm:max-w-xs sm:max-w-sm font-light sm:text-3xl"
+          class="flex justify-between mb-7 max-sm:text-2xl max-sm:max-w-xs sm:max-w-sm font-light sm:text-3xl"
         >
+          <span class="max-sm:text-xs sm:text-sm mr-2">/0{{ item.id }}</span>
           <h1>{{ item.title }}</h1>
         </div>
 
         <div
-          class="text-justify max-sm:text-sm max-sm:leading-loose sm:text-sm sm:flex sm:leading-5 md:leading-6"
+          class="text-justify max-sm:text-sm max-sm:leading-loose sm:text-sm sm:flex sm:leading-5 md:leading-6 relative lg:leading-relaxed xl:leading-loose lg:text-base"
         >
           <p>{{ item.description }}</p>
 
           <div class="max-sm:flex max-sm:justify-end">
-            <div class="max-sm:translate-y-10 sm:ml-6 sm:relative sm:top-6">
-              <span
-                class="w-5 h-0.5 block bg-Ash-Grey transform rotate-90"
-              ></span>
-              <span class="w-5 h-0.5 block bg-Ash-Grey -translate-y-0.5"></span>
+            <div
+              v-if="hoveredItem === item.id"
+              class="absolute max-sm:translate-y-10 sm:ml-6 sm:top-1/2"
+            >
+              <span class="w-5 h-0.5 block bg-white transform rotate-90"></span>
+              <span class="w-5 h-0.5 block bg-white -translate-y-0.5"></span>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div
+        class="flex justify-center mt-24 max-sm:text-base sm:text-lg md:text-xl cursor-pointer hover:font-medium transition-all ease-in-ou duration-300"
+      >
+        <div class="flex items-center">
+          <h1>More about us</h1>
+          <img class="ml-6" src="../assets/svgs/arrow-right.svg" alt="" />
         </div>
       </div>
     </div>
@@ -38,8 +59,9 @@
 
 <script setup>
 import { ref } from "vue";
-
+import { useFollowMouse } from "@/composables/customCursor";
 const hoveredItem = ref(null);
+
 const items = ref([
   {
     id: 1,

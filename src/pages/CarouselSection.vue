@@ -1,9 +1,14 @@
 <template>
-  <div class="text-white container  mx-auto relative top-28 p-2 h-screen">
+  <div class="text-white container mx-auto relative mt-32 p-2">
     <div
-      class="mb-32 font-thin max-sm:text-2xl max-sm:p-2 max-sm:text-center sm:text-4xl sm:text-center md:text-5xl md:text-center xl:text-left xl:max-w-2xl xl:ml-20"
+      class="mb-32 font-extralight max-sm:text-3xl sm:text-4xl md:text-5xl max-sm:p-2 sm:max-w-lg md:max-w-full sm:p-4"
     >
       <h1>Experience the Difference</h1>
+      <div class="">
+        <span class="uppercase max-sm:text-sm sm:text-base font-extralight"
+          >/ furniture gallery</span
+        >
+      </div>
     </div>
     <Swiper
       :modules="[Navigation, Pagination]"
@@ -20,18 +25,22 @@
         >
           <img class="max-sm:h-96 rounded-lg" :src="image.src" alt="" />
           <div
-            class="max-sm:pt-7 font-light max-sm:mb-9 sm:pt-10 sm:mb-11 md:mb-16"
+            class="max-sm:pt-7font-light max-sm:mb-9 sm:pt-10 sm:mb-11 md:mb-16"
           >
             <div
-              class="max-sm:text-2xl flex justify-evenly items-center sm:text-2xl font-thin lg:max-w-md"
+              class="max-sm:text-2xl flex items-center sm:text-2xl font-thin"
             >
-              <span class="hidden sm:block sm:text-sm">/0{{ image.id }}</span>
+              <span class="hidden sm:block sm:text-sm mr-2"
+                >/0{{ image.id }}</span
+              >
               <h1>{{ image.title }}</h1>
             </div>
             <div
-              class="font-thin max-sm:pt-10 text-justify max-sm:text-sm sm:pt-12 md:text-lg lg:max-w-lg xl:max-w-xl mx-auto"
+              class="font-thin max-sm:pt-10 text-justify max-sm:text-sm sm:pt-12 md:text-lg mx-auto"
             >
-              <p>{{ image.description }}</p>
+              <p class="sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
+                {{ image.description }}
+              </p>
             </div>
           </div>
         </div>

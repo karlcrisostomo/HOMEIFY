@@ -8,7 +8,6 @@ export default {
       },
       fontFamily: {
         Poppins: ["Poppins", "sans-serif"],
-        
       },
       height: {
         "3/5": "60%",
@@ -26,6 +25,7 @@ export default {
         "Midnight-Blue": "#12233B",
         "Serene-Azure": "#AFE8FB",
         "Light-Cyan": "#83FFF9",
+        "Midnight-Navy": "#211f28",
       },
       fontSize: {
         "6xl": "5.375rem",

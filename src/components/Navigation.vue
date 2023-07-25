@@ -125,8 +125,8 @@
 </template>
 
 <script>
-import { ref, reactive, watch } from "vue";
-import { useRoute } from "vue-router";
+import { ref, reactive } from "vue";
+
 import { isMenuOpen, toggleMenu } from "../composables/menu";
 
 export default {
@@ -138,11 +138,6 @@ export default {
       { id: 3, name: "Shop", path: "shop" },
       { id: 4, name: "About", path: "about" },
     ]);
-
-    const route = useRoute();
-    watch(route, () => {
-      isMenuOpen = true;
-    });
 
     return {
       hoveredItemId,
