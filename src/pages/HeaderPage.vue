@@ -20,7 +20,7 @@
         </div>
 
         <div>
-          <video autoplay muted loop class="w-screen h-screen object-cover">
+          <video autoplay muted loop class="  w-screen h-screen object-cover">
             <source src="../assets/video/Homeify_Vid.mp4" type="video/mp4" />
           </video>
         </div>
