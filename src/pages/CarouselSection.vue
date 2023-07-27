@@ -1,10 +1,10 @@
 <template>
-  <div class="text-white container mx-auto relative mt-32 p-2">
+  <div class="text-white container m-auto max-sm:mt-12 mt-32 p-2 mb-20">
     <div
-      class="mb-32 font-extralight max-sm:text-3xl sm:text-4xl md:text-5xl max-sm:p-2 sm:max-w-lg md:max-w-full sm:p-4"
+      class="font-extralight max-sm:text-3xl sm:text-4xl md:text-5xl max-sm:p-2 sm:max-w-lg md:max-w-full sm:p-4"
     >
       <h1>Experience the Difference</h1>
-      <div class="">
+      <div class="max-sm:mt-4">
         <span class="uppercase max-sm:text-sm sm:text-base font-extralight"
           >/ furniture gallery</span
         >
@@ -16,27 +16,25 @@
       :loop="true"
       :centered-slides="true"
       :grab-cursor="true"
-      :space-between="50"
+      :space-between="10"
       :pagination="{ clickable: true }"
     >
       <SwiperSlide class="xl:mt-24" v-for="image in images" :key="image.id">
         <div
-          class="mx-auto max-sm:w-full max-sm:p-4 max-sm:max-w-lg sm:max-w-sm md:max-w-lg lg:max-w-xl xl:max-w-none"
+          class="mx-auto w-full max-sm:p-4 max-sm:max-w-sm sm:max-w-md sm:p-2 md:max-w-lg lg:max-w-xl xl:max-w-none"
         >
-          <img class="max-sm:h-96 rounded-lg" :src="image.src" alt="" />
+          <img class="max-sm:h-80 rounded-lg" :src="image.src" alt="" />
           <div
             class="max-sm:pt-7font-light max-sm:mb-9 sm:pt-10 sm:mb-11 md:mb-16"
           >
-            <div
-              class="max-sm:text-2xl flex items-center sm:text-2xl font-thin"
-            >
+            <div class="max-sm:text-2xl flex items-center sm:text-xl font-thin">
               <span class="hidden sm:block sm:text-sm mr-2"
                 >/0{{ image.id }}</span
               >
               <h1>{{ image.title }}</h1>
             </div>
             <div
-              class="font-thin max-sm:pt-10 text-justify max-sm:text-sm sm:pt-12 md:text-lg mx-auto"
+              class="font-thin max-sm:pt-10 max-sm:max-w-sm text-justify max-sm:text-sm    sm:pt-12 md:text-lg mx-auto"
             >
               <p class="sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
                 {{ image.description }}
@@ -120,7 +118,6 @@ onMounted(() => {
 
 .swiper-slide img {
   width: 100%;
-
   transition: all 0.25s ease-out;
   transform: scale(0.6);
   transition: all 0.3s ease-out;
@@ -138,6 +135,7 @@ onMounted(() => {
 
 .swiper-slide-active img {
   transform: scale(1);
+  width: 100%;
 }
 
 @media screen and (min-width: 639px) {
@@ -149,6 +147,12 @@ onMounted(() => {
 @media screen and (min-width: 1024px) {
   .swiper-slide img {
     height: 500px;
+  }
+}
+
+@media screen and(min-width:640px) {
+  .swiper-slide-active img {
+    width: 50%;
   }
 }
 </style>

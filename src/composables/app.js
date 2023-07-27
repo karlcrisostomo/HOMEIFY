@@ -3,8 +3,9 @@ import { useFollowMouse } from "@/composables/customCursor";
 
 export default {
   setup() {
-    const { ball } = useFollowMouse();
 
+
+    const { ball } = useFollowMouse();
     return { isMenuOpen, ball };
   },
 };

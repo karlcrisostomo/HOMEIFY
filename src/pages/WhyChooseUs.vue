@@ -20,7 +20,7 @@
         @mouseleave="hoveredItem = null"
       >
         <div
-          class="flex justify-between mb-7 max-sm:text-2xl max-sm:max-w-xs sm:max-w-sm font-light sm:text-3xl"
+          class="flex justify-between mb-7 max-sm:text-2xl max-sm:max-w-xs sm:max-w-sm font-light sm:text-2xl lg:max-w-xs lg:text-3xl xl:max-w-sm"
         >
           <span class="max-sm:text-xs sm:text-sm mr-2">/0{{ item.id }}</span>
           <h1>{{ item.title }}</h1>

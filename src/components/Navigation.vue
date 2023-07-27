@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="flex justify-between p-4 items-center">
+    <nav class="flex justify-between p-4 items-center    ">
       <div class="z-10" @click="$router.push('/')">
         <img
           class="cursor-pointer hover:scale-90 hover:ease-in-out delay-200"
@@ -17,7 +17,7 @@
       >
         <div
           :class="{
-            '  bg-white w-10 h-10 rounded-full flex justify-center items-center   cursor-pointer  ':
+            '  bg-white w-10 h-10 rounded-full flex justify-center items-center cursor-pointer  ':
               !isMenuOpen,
             'cursor-pointer bg-black w-10 h-10 rounded-full -translate-x-2    ':
               isMenuOpen,
@@ -27,7 +27,7 @@
           <div hovered="">
             <span
               :class="{
-                ' bg-white  rotate-45 translate-x-2 translate-y-5 transition-transform':
+                ' bg-white   rotate-45 translate-x-2 translate-y-5 transition-transform':
                   isMenuOpen,
                 ' bg-black': !isMenuOpen,
               }"
@@ -54,11 +54,11 @@
       <div
         :class="{
           '  hidden ': !isMenuOpen,
-          ' fixed  bg-white  w-full h-full  z-30 text-5xl top-0 left-0  p-4  animate-in-circle-swoop   text-black ':
+          ' fixed  bg-white w-full h-full  z-30 text-5xl top-0 left-0  p-4  animate-in-circle-swoop   text-black ':
             isMenuOpen,
         }"
       >
-        <div class="translate-y-32 container">
+        <div class="translate-y-32 container ">
           <div class="grid sm:grid-cols-2">
             <div class="flex">
               <div>

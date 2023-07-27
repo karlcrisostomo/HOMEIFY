@@ -1,6 +1,6 @@
 <template>
-  <div class="p-4 bg-Midnight-Navy text-white">
-    <div class="container mx-auto">
+  <div class="p-4 bg-Midnight-Navy text-white ">
+    <div class="container mx-auto max-sm:max-w-xs">
       <div class="relative top-20 text-base font-extralight">
         <h1>/ Furniture Collection</h1>
       </div>

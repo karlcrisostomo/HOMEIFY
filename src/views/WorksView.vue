@@ -1,6 +1,11 @@
 <template>
-  <div class="text-white" ref="containerRef">
+  <div class="text-white  " ref="containerRef">
     <div class="container mx-auto"></div>
+    <Navigation />
+
+    <FeatureWorks class="" />
+
+
   </div>
 </template>
 
