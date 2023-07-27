@@ -1,7 +1,7 @@
 <template>
   <div class="text-white  " ref="containerRef">
     <div class="container mx-auto"></div>
-    <Navigation />
+    <Navigation class="" />
 
     <FeatureWorks class="" />
 

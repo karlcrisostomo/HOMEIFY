@@ -5,7 +5,7 @@
     @mouseleave="onMouseLeave"
   >
     <div class="h-screen flex border-red-400 border-2 p-2">
-      <div class="text-2xl z-30">
+      <div class="text-2xl z-10 ">
         <h1>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque
           quae vero ratione!
