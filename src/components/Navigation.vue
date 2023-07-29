@@ -126,7 +126,6 @@
 import { ref, reactive } from "vue";
 
 import { isMenuOpen, toggleMenu } from "../composables/menu";
-import { is } from "quasar";
 
 export default {
   setup() {
