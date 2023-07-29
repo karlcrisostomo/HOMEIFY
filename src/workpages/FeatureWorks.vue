@@ -1,15 +1,12 @@
 <template>
   <div
-    class="relative overflow-hidden h-screen container mx-auto"
+    class="overflow-hidden h-screen container mx-auto"
     @mouseenter="onMouseEnter"
     @mouseleave="onMouseLeave"
   >
-    <div class="h-screen flex border-red-400 border-2 p-2">
-      <div class="text-2xl z-10 ">
-        <h1>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque
-          quae vero ratione!
-        </h1>
+    <div class="relative max-sm:max-w-xs sm:max-w-sm m-auto mt-20 md:max-w-md">
+      <div class="text-2xl z-10 max-sm:text-lg leading-loose">
+        <h1>Crafted Creations: A Gallery of Furniture Works and Projects</h1>
       </div>
       <div
         ref="ball"
@@ -29,9 +26,9 @@
 <script setup>
 import { ref, onUnmounted, watch } from "vue";
 import { useFollowMouse } from "@/composables/customCursor";
-// Import the composable
 const gallery = require.context("@/assets/images", false, /\.png$/);
 // Sample random images (Replace these with your own image URLs)
+const isMobile = ref(null);
 const images = ref([
   { id: 1, src: gallery("./Coffee_Table.png") },
   { id: 2, src: gallery("./Dining_Sets.png") },
@@ -39,7 +36,7 @@ const images = ref([
   // Add more image URLs here
 ]);
 
-const xPercent =  -80;
+const xPercent = -80;
 const yPercent = -80;
 
 // Use the composable with custom xPercent and yPercent
@@ -83,7 +80,4 @@ const onMouseLeave = () => {
 const intervalId = setInterval(updateRandomImage, 500); // Change image every 5 seconds
 
 // Clear the interval when the component is unmounted
-onUnmounted(() => {
-  clearInterval(intervalId);
-});
 </script>

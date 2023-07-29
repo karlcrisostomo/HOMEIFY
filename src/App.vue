@@ -1,17 +1,17 @@
 <template>
-  <div class=" bg-black font-Poppins">
+  <div class="bg-black font-Poppins">
     <div
       :class="{
-        ' w-8 h-8 fixed top-0 left-0 border-2 border-white border-solid rounded-full z-50 pointer-events-none':
+        ' hidden  lg:block w-8 h-8 fixed top-0 left-0 border-2 border-white border-solid rounded-full z-50 pointer-events-none':
           !isMenuOpen,
-        'w-8 h-8 fixed top-0 left-0 border-2  border-solid rounded-full z-50 pointer-events-none border-black':
+        ' hidden lg:block w-8 h-8 fixed top-0 left-0 border-2  border-solid rounded-full z-50 pointer-events-none border-black':
           isMenuOpen,
       }"
       ref="ball"
     ></div>
 
     <router-view />
-</div>
+  </div>
 </template>
 
 <style>

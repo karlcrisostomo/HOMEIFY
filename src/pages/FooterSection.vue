@@ -8,9 +8,6 @@
       </h1>
       <div class="container mx-auto p-4 mt-14">
         <div>
-          <h1 class="text-3xl font-bold mt-10">
-            Get Exclusive Deals & Discount
-          </h1>
           <div class="container mx-auto p-4">
             <div class="sm:max-w-sm sm:mx-auto">
               <form ref="form" @submit.prevent="sendEmail">
@@ -21,9 +18,12 @@
                     type="email"
                     name="user_email"
                     placeholder="example.email.com"
-                    :class="{ ' border-red-500 border-2 outline-red-500': isInvalidEmail }"
+                    :class="{
+                      ' border-red-500 border-2 outline-red-500':
+                        isInvalidEmail,
+                    }"
                   />
-                  <span  v-if="isInvalidEmail" class=" text-red-500"
+                  <span v-if="isInvalidEmail" class="text-red-500"
                     >Please enter a valid email address.</span
                   >
                 </div>
@@ -118,7 +118,7 @@ import emailjs from "@emailjs/browser";
 export default {
   setup() {
     const email = ref("");
-    const message = ref(""); // Add the message variable here
+    const message = ref(""); 
     const isInvalidEmail = ref(false);
     const form = ref(null);
 
@@ -136,9 +136,9 @@ export default {
           )
           .then((result) => {
             console.log("SUCCESS!", result.text);
-            // Optionally reset the form fields after successful submission
+
             email.value = "";
-            message.value = ""; // Reset the message field as well
+            message.value = "";
             isInvalidEmail.value = false;
           })
           .catch((error) => {

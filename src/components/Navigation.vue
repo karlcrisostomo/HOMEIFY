@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="flex justify-between p-4 items-center">
+    <nav class="flex justify-between p-4 items-center text-white">
       <div class="z-10" @click="$router.push('/')">
         <img
           class="cursor-pointer hover:scale-90 hover:ease-in-out delay-200"
@@ -9,12 +9,10 @@
         />
       </div>
 
-      <div
-        :class="{
-          ' z-50 -mt-3': !isMenuOpen,
-          'z-50 -mt-3': isMenuOpen,
-        }"
-      >
+      <div class="flex items-center gap-4 z-50 -mt-2">
+        <h1 :class="{ 'text-black ': isMenuOpen }">
+          {{ isMenuOpen ? "Close" : "Menu" }}
+        </h1>
         <div
           :class="{
             '  bg-white w-10 h-10 rounded-full flex justify-center items-center cursor-pointer  ':
@@ -58,7 +56,7 @@
             isMenuOpen,
         }"
       >
-        <div class="translate-y-32 container  max-sm:max-w-sm">
+        <div class="translate-y-32 container max-sm:max-w-sm">
           <div class="grid sm:grid-cols-2">
             <div class="flex">
               <div>
@@ -92,8 +90,8 @@
                 </ul>
               </div>
             </div>
-            <section class=" relative max-sm:max-w-xs m-auto">
-              <div class="text-sm ml-2 leading-loose ">
+            <section class="relative max-sm:max-w-xs m-auto">
+              <div class="text-sm ml-2 leading-loose">
                 <div class="mb-12">
                   <h1 class="text-lg text-gray-400">Philippines</h1>
                   <p>2432, Dagupan City,</p>
@@ -128,6 +126,7 @@
 import { ref, reactive } from "vue";
 
 import { isMenuOpen, toggleMenu } from "../composables/menu";
+import { is } from "quasar";
 
 export default {
   setup() {

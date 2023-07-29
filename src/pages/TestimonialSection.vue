@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto mt-48 text-white h-screen">
+  <div class="container mx-auto mt-48 text-white  sm:h-screen">
     <div class="sm:max-w-lg md:max-w-full mx-auto">
       <div
         class="uppercase max-sm:text-sm font-extralight max-sm:tracking-wide max-sm:max-w-xs mx-auto sm:max-w-md lg:translate-y-80 lg:max-w-4xl xl:max-w-6xl xl:m-auto"
