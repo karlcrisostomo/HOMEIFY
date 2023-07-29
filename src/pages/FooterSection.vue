@@ -23,7 +23,7 @@
                         isInvalidEmail,
                     }"
                   />
-                  <span v-if="isInvalidEmail" class="text-red-500 "
+                  <span v-if="isInvalidEmail" class="text-red-500"
                     >Please enter a valid email address.</span
                   >
                 </div>
@@ -91,7 +91,7 @@
                 /></a>
               </figure>
               <figure>
-                <a href="https://github.com/karlcrisostomo/Homeify.git"
+                <a href="https://github.com/karlcrisostomo/HOMEIFY.git"
                   ><img a src="../assets/svgs/github_icon.svg" alt=""
                 /></a>
               </figure>
@@ -118,7 +118,7 @@ import emailjs from "@emailjs/browser";
 export default {
   setup() {
     const email = ref("");
-    const message = ref(""); 
+    const message = ref("");
     const isInvalidEmail = ref(false);
     const form = ref(null);
 
