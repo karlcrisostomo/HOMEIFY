@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="flex justify-between p-4 items-center    ">
+    <nav class="flex justify-between p-4 items-center">
       <div class="z-10" @click="$router.push('/')">
         <img
           class="cursor-pointer hover:scale-90 hover:ease-in-out delay-200"
@@ -58,21 +58,21 @@
             isMenuOpen,
         }"
       >
-        <div class="translate-y-32 container ">
+        <div class="translate-y-32 container  max-sm:max-w-sm">
           <div class="grid sm:grid-cols-2">
             <div class="flex">
               <div>
                 <h1 class="text-lg font-medium -rotate-90 mr-14">Menu</h1>
               </div>
               <div>
-                <ul class="  ">
+                <ul>
                   <li
                     v-for="navItem in navLists"
                     :key="navItem.id"
                     @mouseover="hoveredItemId = navItem.id"
                     @mouseout="hoveredItemId = null"
                     :class="{
-                      'hover:translate-x-5 hover:transition-transform duration-500 text-3xl  tracking-widest font-light  mb-20':
+                      'hover:translate-x-5 hover:transition-transform duration-500 max-sm:text-2xl sm:text-3xl  tracking-widest font-light  mb-20':
                         navItem.id,
                     }"
                   >
@@ -92,8 +92,8 @@
                 </ul>
               </div>
             </div>
-            <section>
-              <div class="text-sm ml-2 leading-loose">
+            <section class=" relative max-sm:max-w-xs m-auto">
+              <div class="text-sm ml-2 leading-loose ">
                 <div class="mb-12">
                   <h1 class="text-lg text-gray-400">Philippines</h1>
                   <p>2432, Dagupan City,</p>
