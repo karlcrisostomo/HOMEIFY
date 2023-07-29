@@ -124,7 +124,6 @@
 
 <script>
 import { ref, reactive } from "vue";
-
 import { isMenuOpen, toggleMenu } from "../composables/menu";
 
 export default {

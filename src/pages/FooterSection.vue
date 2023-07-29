@@ -23,7 +23,7 @@
                         isInvalidEmail,
                     }"
                   />
-                  <span v-if="isInvalidEmail" class="text-red-500"
+                  <span v-if="isInvalidEmail" class="text-red-500 "
                     >Please enter a valid email address.</span
                   >
                 </div>
