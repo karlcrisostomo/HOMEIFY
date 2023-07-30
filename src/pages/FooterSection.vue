@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="relative top-32 container mx-auto">
+    <div class="relative mt-24 container mx-auto">
       <h1
         class="font-bold text-4xl text-center text-transparent bg-gradient-to-tr bg-clip-text from-Dark-Teel to-Vibrant-Purple"
       >
@@ -49,7 +49,7 @@
 
         <div class="text-Ash-Grey lg:max-w-4xl lg:mx-auto">
           <footer>
-            <div class="sm:grid sm:grid-cols-3 p-5 sm:translate-y-6">
+            <div class="sm:grid sm:grid-cols-3 p-5">
               <div class="mb-6">
                 <ul class="">
                   <li class="font-medium mb-2">Support</li>

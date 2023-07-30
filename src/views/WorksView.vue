@@ -1,12 +1,33 @@
 <template>
-  <div class="text-white  " ref="containerRef">
-    <div class="container mx-auto"></div>
-    <Navigation class=" container mx-auto" />
+  <div
+    :class="{ 'text-white w-full h-screen': !isMenuOpen }"
+    ref="containerRef"
+  >
+    <div class=" flex justify-center">
+      <component :is="Navigation" class="container mx-auto absolute" />
+    </div>
 
-    <FeatureWorks class="" />
-
-
+    <component :is="TopFeature" class="container mx-auto" />
+    <component :is="HeroSection" class="container mx-auto" />
   </div>
 </template>
 
-<script src="@/composables/work"></script>
+<script setup>
+import { isMenuOpen } from "@/composables/menu";
+import { customScrollbar } from "@/composables/scrollbar";
+import { defineAsyncComponent } from "vue";
+
+const { containerRef } = customScrollbar();
+const FeatureWorks = defineAsyncComponent(() =>
+  import("../workpages/FeatureWorks.vue")
+);
+const TopFeature = defineAsyncComponent(() =>
+  import("../workpages/TopFeature.vue")
+);
+const Navigation = defineAsyncComponent(() =>
+  import("../components/Navigation.vue")
+);
+const HeroSection = defineAsyncComponent(() =>
+  import("../workpages/HeroWorks.vue")
+);
+</script>

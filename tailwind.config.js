@@ -8,6 +8,7 @@ export default {
       },
       fontFamily: {
         Poppins: ["Poppins", "sans-serif"],
+        Gupter: ["Gupter", "sans-serif"],
       },
       height: {
         "3/5": "60%",

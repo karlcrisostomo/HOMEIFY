@@ -1,16 +1,24 @@
 <template>
   <div
-    class="overflow-hidden h-screen container mx-auto"
+    class="overflow-hidden container mx-auto"
     @mouseenter="onMouseEnter"
     @mouseleave="onMouseLeave"
   >
-    <div class="relative max-sm:max-w-xs sm:max-w-sm m-auto mt-20 md:max-w-md">
-      <div class="text-2xl z-10 max-sm:text-lg leading-loose">
+    <div
+      class="relative justify-center max-sm:max-w-xs sm:max-w-sm m-auto mt-20 md:max-w-md lg:max-w-xl lg:p-4 lg:mt-28 lg:mx-0"
+    >
+      <div
+        class="text-2xl z-10 max-sm:text-2xl leading-loose sm:text-3x lg:text-5xl lg:leading-snug font-extralight"
+      >
         <h1>Crafted Creations: A Gallery of Furniture Works and Projects</h1>
+      </div>
+
+      <div class="mt-6 lg:hidden text-center">
+        <h1>"Click on the screen to see Images"</h1>
       </div>
       <div
         ref="ball"
-        class="duration-75 cursor-pointer absolute sm:max-w-lg mx-auto bg-white"
+        class="duration-75 cursor-pointer sm:max-w-lg mx-auto bg-white"
         :style="{ opacity: imageOpacity }"
       >
         <img
@@ -24,7 +32,7 @@
 </template>
 
 <script setup>
-import { ref, onUnmounted, watch } from "vue";
+import { ref, watch } from "vue";
 import { useFollowMouse } from "@/composables/customCursor";
 const gallery = require.context("@/assets/images", false, /\.png$/);
 // Sample random images (Replace these with your own image URLs)
