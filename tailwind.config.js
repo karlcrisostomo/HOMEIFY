@@ -6,12 +6,14 @@ export default {
       borderRadius: {
         custom: "2.5rem",
       },
+
       fontFamily: {
         Poppins: ["Poppins", "sans-serif"],
         Gupter: ["Gupter", "sans-serif"],
       },
       height: {
         "3/5": "60%",
+        0.5: "0.15rem",
       },
       colors: {
         "silver-sand": "#CECECE",
@@ -22,7 +24,7 @@ export default {
         "Dark-Teel": "#00424E",
         "Vibrant-Purple": "#A208D8",
         "Baby-Blue": "#B1E5F2",
-        "Ash-Grey": "#A6A6A8",
+        "Ash-Grey": "#767676",
         "Midnight-Blue": "#12233B",
         "Serene-Azure": "#AFE8FB",
         "Light-Cyan": "#83FFF9",

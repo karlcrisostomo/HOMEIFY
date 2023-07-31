@@ -1,31 +1,21 @@
 <template>
-  <div class=" h-screen    ">
-    <div class="absolute w-full h-full top-0 left-0 ">
-      <div class="flex justify-center">
+  <div
+    class="bg-[url(../assets/images/works_bg.png)] bg-cover bg-center bg-no-repeat"
+  >
+    <div class="container mx-auto h-screen">
+      <div
+        class="relative top-1/2 max-sm:leading-snug max-sm:text-5xl bg-black/50 max-sm:max-w-xs mx-auto p-2 sm:max-w-md sm:text-5.5xl md:max-w-lg sm:top-1/3 lg:text-6xl lg:max-w-xl"
+      >
+        <h1 class="text-center font-bold font-Gupter tracking-wider">WELCOME TO HOMEIFY</h1>
+
         <div
-          class="max-sm:text-5xl max-sm:max-w-sm absolute  max-sm:top-1/4 sm:top-72 sm:text-6xl sm:max-w-lg lg:text-8xl lg:max-w-xl sm:leading-none"
+          class="flex justify-center max-sm:text-base mt-4 sm:text-lg md:text-xl"
         >
-          <h1 class="text-center font-bold font-Gupter">WELCOME TO HOMEIFY</h1>
-
-          <div
-            class="flex justify-center max-sm:text-xl mt-4 sm:text-lg md:text-xl"
+          <span class="border-l-2 border-r-2 p-2" v-if="time">{{ time }}</span>
+          <span v-else class="border-l-2 border-r-2 p-2"
+            >The Date is Not Available</span
           >
-            <span class="border-l-2 border-r-2 p-2" v-if="time">{{
-              time
-            }}</span>
-            <span v-else class="border-l-2 border-r-2 p-2"
-              >The Date is Not Available</span
-            >
-          </div>
         </div>
-      </div>
-
-      <div>
-        <img
-          class="w-full h-full object-cover bg-fixed"
-          src="../assets/images/works_bg.png"
-          alt="background"
-        />
       </div>
     </div>
   </div>
