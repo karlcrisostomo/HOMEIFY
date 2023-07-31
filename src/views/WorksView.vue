@@ -3,11 +3,11 @@
     :class="{ 'text-white w-full h-screen': !isMenuOpen }"
     ref="containerRef"
   >
-    <div class=" flex justify-center">
+    <div class="flex justify-center">
       <component :is="Navigation" class="container mx-auto absolute" />
     </div>
 
-    <component :is="TopFeature" class="container mx-auto" />
+    <component :is="TopFeature" />
     <component :is="HeroSection" class="container mx-auto" />
   </div>
 </template>
