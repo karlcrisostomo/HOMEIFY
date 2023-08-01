@@ -16,11 +16,8 @@
 import { isMenuOpen } from "@/composables/menu";
 import { customScrollbar } from "@/composables/scrollbar";
 import { defineAsyncComponent } from "vue";
-
 const { containerRef } = customScrollbar();
-const FeatureWorks = defineAsyncComponent(() =>
-  import("../workpages/FeatureWorks.vue")
-);
+
 const TopFeature = defineAsyncComponent(() =>
   import("../workpages/TopFeature.vue")
 );

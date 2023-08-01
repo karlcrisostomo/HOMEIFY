@@ -3,6 +3,8 @@
     <div class="">
       <div class="max-sm:text-3xl font-light max-sm:mx-auto">
         <div
+          v-motion-slide-visible-right
+          :delay="500"
           class="max-sm:max-w-sm p-6 tracking-wider sm:max-w-xl lg:max-w-2xl xl:max-w-4xl mx-auto"
         >
           <h1 class="mt-36 font-extralight uppercase max-sm:text-sm">
@@ -17,10 +19,14 @@
 
         <div>
           <div
+            v-motion-slide-visible-left
+            :delay="500"
             class="text-base mt-20 leading-loose tracking-wide text-justify bg-[url(../assets/images/feature2_bg.jpg)] bg-no-repeat bg-cover h-screen bg-center lg:w-4/5"
-          ></div>
+          />
 
           <p
+            v-motion-slide-visible-right
+            :delay="500"
             class="font-extralight max-sm:p-10 sm:p-6 max-sm:max-w-xs sm:max-w-sm sm:text-2xl mx-auto mt-40 max-sm:text-lg max-sm:leading-relaxed tracking-wide md:relative md:-right-44 lg:max-w-md sm:leading-relaxed lg:leading-relaxed xl:max-w-xl lg:text-3xl"
           >
             Crafted with expertise and premium materials, our elegant furniture
@@ -29,6 +35,8 @@
         </div>
 
         <div
+          v-motion-fade-visible
+          :delay="500"
           class="max-sm:p-10 md:grid md:grid-cols-2 sm:grid-flow-dens pt-44 md:max-w-2xl md:gap-16 md:mx-auto xl:max-w-4xl xl:gap-30 xl:mx-auto"
         >
           <figure
@@ -65,12 +73,19 @@
         </div>
       </div>
     </div>
+
+    <section>
+      <FooterSection/>
+
+    </section>
   </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
+import FooterSection from "@/pages/FooterSection.vue";
 const images = require.context("@/assets/images", false, /\.jpg$/);
+
 
 const fwImages = ref([
   {
