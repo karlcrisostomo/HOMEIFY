@@ -1,39 +1,61 @@
 <template>
   <div class="h-screen">
     <div class="">
-      <div
-        class="uppercase max-sm:text-3xl font-extralight max-sm:max-w-sm max-sm:mx-auto max-sm:leading-snug"
-      >
-        <h1 class="max-sm:mt-20 text-center tracking-wider">
-          Craftmanship and quality
-        </h1>
+      <div class="max-sm:text-3xl font-light max-sm:mx-auto">
+        <div
+          class="max-sm:max-w-sm p-6 tracking-wider sm:max-w-xl lg:max-w-2xl xl:max-w-4xl mx-auto"
+        >
+          <h1 class="mt-36 font-extralight uppercase max-sm:text-sm">
+            / Expertise
+          </h1>
+          <p
+            class="max-sm:text-3xl font-extralight mt-4 sm:text-5xl sm:leading-snug lg:text-5xl lg:leading-relaxed xl:leading-snug tracking-wider lg:max-w-3xl xl:max-w-xl mb-28"
+          >
+            Discover Elegant Furniture for Your Stunning Home
+          </p>
+        </div>
 
-        <div class="text-base mt-20 leading-loose tracking-wide text-justify">
-          <p>
-            With a fusion of expert craftsmanship and premium materials, our
-            dedication lies in designing elegant furniture that transcends
-            trends and withstands the test of time.
+        <div>
+          <div
+            class="text-base mt-20 leading-loose tracking-wide text-justify bg-[url(../assets/images/feature2_bg.jpg)] bg-no-repeat bg-cover h-screen bg-center lg:w-4/5"
+          ></div>
+
+          <p
+            class="font-extralight max-sm:p-10 sm:p-6 max-sm:max-w-xs sm:max-w-sm sm:text-2xl mx-auto mt-40 max-sm:text-lg max-sm:leading-relaxed tracking-wide md:relative md:-right-44 lg:max-w-md sm:leading-relaxed lg:leading-relaxed xl:max-w-xl lg:text-3xl"
+          >
+            Crafted with expertise and premium materials, our elegant furniture
+            defies trends and endures time.
           </p>
         </div>
 
         <div
-          class="max-sm:p-4 md:grid md:grid-cols-2  sm:grid-flow-dens  mt-12  md:max-w-2xl md:gap-10 md:mx-auto xl:max-w-4xl xl:gap-24 xl:mx-auto"
+          class="max-sm:p-10 md:grid md:grid-cols-2 sm:grid-flow-dens pt-44 md:max-w-2xl md:gap-16 md:mx-auto xl:max-w-4xl xl:gap-30 xl:mx-auto"
         >
           <figure
             v-for="fwImage in fwImages"
             :key="fwImage.id"
-            class="  sm:max-w-sm mx-auto "
-            :class="{ ' pt-32': fwImage.id === 2 }"
+            class="sm:max-w-sm mx-auto"
+            :class="{ ' md:mt-44': fwImage.id === 2 || fwImage.id === 4 }"
           >
-            <div class=" lg:max-w-sm mx-auto ">
+            <div class="max-sm:max-w-xs mx-auto">
               <img class="w-full h-1/2" :src="fwImage.src" alt="" />
 
-              <div class="text-base mt-4 max-sm:max-w-xs mx-auto mb-6">
-                <h1 class="font-medium max-sm:text-base">
+              <div class="text-base mt-4 max-sm:max-w-xs mx-auto mb-32">
+                <h1
+                  class="font-extralight max-sm:text-xs flex items-center sm:text-base md:flex-1 md:w-80"
+                >
                   {{ fwImage.title }}
+
+                  <span class="ml-5 w-32 h-0.5 block bg-gray-300"></span>
+                </h1>
+
+                <h1
+                  class="font-extralight tracking-wider leading-loose mt-4 text-xl sm:text-2xl"
+                >
+                  {{ fwImage.subheading }}
                 </h1>
                 <p
-                  class="mt-7 font-medium max-sm:text-sm tracking-wide max-sm:leading-relaxed text-Ash-Grey text-justify"
+                  class="mt-7 font-medium max-sm:text-base sm:text-xl tracking-wide max-sm:leading-relaxed text-Ash-Grey lg:font-normal xl:leading-loose xl:tracking-wider"
                 >
                   {{ fwImage.desciption }}
                 </p>
@@ -54,23 +76,43 @@ const fwImages = ref([
   {
     id: 1,
     src: images("./ftw_1.jpg"),
-    title: "AWARD-WINNING DESIGNERS",
+    title: "Quality Matters",
+    subheading:
+      "Exquisite craftsmanship, global-sourced materials: HOMEIFY's quality",
     desciption:
-      "HOMEIFY prioritizes quality with carefully sourced materials from worldwide,  focusing on fine leather, wood, and steel, and meticulous attention to detail.",
+      "Handpicked premium brands, exceptional craftsmanship, innovative designs.",
   },
   {
     id: 2,
     src: images("./ftw_2.jpg"),
-    title: "THE COMPLETE EXPERIENCE",
+    title: "Seamless Shopping",
+    subheading: "Effortless Shopping: Smooth Retail Experience",
     desciption:
-      "HOMEIFY's quality begins with careful material selection from worldwide sources, emphasizing exceptional raw materials and meticulous attention to detail.",
+      "Winning strategies, delightful experience, from sourcing to delivery.",
   },
   {
     id: 3,
     src: images("./ftw_3.jpg"),
-    title: "SKILLED & EXPERIENCED CRAFTSMEN",
+    title: "Crafted to Perfection",
+    subheading: "Masterful Artistry and Precision",
     desciption:
-      "HOMEIFY's skilled craftsmen, trained and experienced, embark on their work.",
+      " Intricate craftsmanship, unmatched durability, elegant and functional.",
+  },
+  {
+    id: 4,
+    src: images("./ftw_3.jpg"),
+    title: "Personalized Style",
+    subheading: "Uniquely Crafted for You",
+    desciption:
+      " Recommendations for modern, classic, minimalist, or eclectic preferences.",
+  },
+  {
+    id: 5,
+    src: images("./ftw_3.jpg"),
+    title: "Your Satisfaction",
+    subheading: "Crafted for Unmatched Delight",
+    desciption:
+      " Customer-centric approach, delighted with your perfect furniture piece.",
   },
 ]);
 </script>

@@ -8,7 +8,7 @@
     </div>
 
     <component :is="TopFeature" />
-    <component :is="HeroSection" class="container mx-auto" />
+    <component :is="HeroSection" />
   </div>
 </template>
 
