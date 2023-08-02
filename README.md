@@ -18,7 +18,6 @@ Homeify Furniture Store is a modern and stylish website dedicated to turning you
 
 - Explore a wide variety of home improvement ideas and interior design concepts.
 - User-friendly and responsive design for a seamless experience on all devices.
-- Subscribe to our email newsletter to stay updated on the latest trends and tips.
 - Enjoy smooth and captivating animations powered by VueUse/Motion.
 - Discover a dynamic and interactive experience with SwiperJS.
 
