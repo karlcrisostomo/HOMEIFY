@@ -1,10 +1,10 @@
 <template>
-  <div class="text-white container m-auto max-sm:mt-12 mt-32 p-2 mb-20">
+  <div class="text-white p-2 mb-20">
     <div
-      class="font-extralight max-sm:text-3xl sm:text-4xl md:text-5xl max-sm:p-2 sm:max-w-lg md:max-w-full sm:p-4"
+      class="font-extralight max-sm:text-3xl sm:text-4xl md:text-5xl max-sm:p-2 sm:max-w-lg md:max-w-full sm:p-4 xl:max-w-5xl xl:mx-auto"
     >
-      <h1>Experience the Difference</h1>
-      <div class="max-sm:mt-4">
+      <h1 class="mt-32">Experience the Difference</h1>
+      <div class="mb-12">
         <span class="uppercase max-sm:text-sm sm:text-base font-extralight"
           >/ furniture gallery</span
         >
@@ -21,11 +21,11 @@
     >
       <SwiperSlide class="xl:mt-24" v-for="image in images" :key="image.id">
         <div
-          class="mx-auto w-full max-sm:p-4 max-sm:max-w-sm sm:max-w-md sm:p-2 md:max-w-lg lg:max-w-xl xl:max-w-none"
+          class="mx-auto w-full max-sm:p-4 max-sm:max-w-sm sm:max-w-md sm:p-2 md:max-w-lg lg:max-w-xl xl:max-w-6xl"
         >
           <img class="max-sm:h-80 rounded-lg" :src="image.src" alt="" />
           <div
-            class="max-sm:pt-7font-light max-sm:mb-9 sm:pt-10 sm:mb-11 md:mb-16"
+            class="max-sm:pt-7font-light max-sm:mb-9 sm:pt-10 sm:mb-11 md:mb-16 sm:max-w-sm md:max-w-md lg:mx-auto xl:max-w-3xl"
           >
             <div class="max-sm:text-2xl flex items-center sm:text-xl font-thin">
               <span class="hidden sm:block sm:text-sm mr-2"
@@ -34,7 +34,7 @@
               <h1>{{ image.title }}</h1>
             </div>
             <div
-              class="font-thin max-sm:pt-10 max-sm:max-w-sm text-justify max-sm:text-sm    sm:pt-12 md:text-lg mx-auto"
+              class="font-thin max-sm:pt-10 max-sm:max-w-sm text-justify max-sm:text-sm sm:pt-12 md:text-lg mx-auto"
             >
               <p class="sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
                 {{ image.description }}
@@ -54,7 +54,7 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-const photos = require.context("@/assets/images", false, /\.png$/);
+const photos = require.context("@/assets/carousel_images", false, /\.png$/);
 
 const images = ref([
   {
@@ -80,14 +80,14 @@ const images = ref([
   },
   {
     id: 4,
-    src: photos("./slide_3.png"),
+    src: photos("./slide_4.png"),
     title: "EcoChic Reclaimed Bookshelf",
     description:
       "Embrace sustainability and artistic charm with this one-of-a-kind bookshelf crafted from reclaimed wood, adding a touch of eco-consciousness to your decor.",
   },
   {
     id: 5,
-    src: photos("./slide_3.png"),
+    src: photos("./slide_5.png"),
     title: "Artisan Haven Writing Desk",
     description:
       "Find inspiration at this beautifully crafted walnut writing desk, boasting intricate detailing, spacious work surface, and vintage allure.",

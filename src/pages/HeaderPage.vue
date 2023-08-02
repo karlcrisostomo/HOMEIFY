@@ -3,7 +3,7 @@
     <div class="container mx-auto">
       <Navigation />
 
-      <div class="absolute w-full h-full top-0 left-0 z-0">
+      <div class="absolute w-full h-full top-0 left-0">
         <div v-motion-slide-left :delay="700" class="flex justify-center z-10">
           <div class="absolute top-64 max-sm:max-w-sm max-sm:p-3">
             <p
@@ -25,4 +25,6 @@
   </div>
 </template>
 
-<script src="../composables/header"></script>
+<script setup>
+import Navigation from "@/components/Navigation.vue";
+</script>

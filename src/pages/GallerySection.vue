@@ -1,11 +1,14 @@
 <template>
-  <div class="p-4 bg-Midnight-Navy text-white ">
+  <div class="p-4 bg-Midnight-Navy text-white">
     <div class="container mx-auto max-sm:max-w-sm">
-      <div class="relative top-20 text-base font-extralight">
-        <h1>/ Furniture Collection</h1>
+      <div
+        class="relative top-20 max-sm:text-2xl sm:text-4xl lg:text-5xl tracking-wide font-extralight sm:leading-snug xl:leading-relaxed xl:ml-14"
+      >
+        <h3 class="text-base">/Timeless Elegance</h3>
+        <h1 class="">Classic Furniture Collection</h1>
       </div>
       <div
-        class="w-full sm:grid sm:grid-cols-2 md:grid-cols-3 mt-40 sm:gap-5 lg:gap-5 xl:gap-2"
+        class=" sm:grid sm:grid-cols-2 md:grid-cols-3 mt-40 sm:gap-5 lg:gap-5"
       >
         <figure
           v-motion-fade-visible
@@ -23,7 +26,7 @@
               <img
                 :src="galleryImg.src"
                 :alt="galleryImg.alt"
-                class="mb-5 sm:w-full md:w-96"
+                class="mb-5 sm:w-full"
               />
             </div>
 

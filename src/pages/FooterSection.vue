@@ -163,7 +163,7 @@ const isValidEmail = (value) => {
 };
 </script>
 
-<style>
+<style scoped>
 li {
   text-decoration: none;
   transition: text-decoration 1000ms ease-in-out;
