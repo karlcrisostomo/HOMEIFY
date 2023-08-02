@@ -1,7 +1,7 @@
 <template>
   <div class="h-screen">
     <div class="">
-      <div class="max-sm:text-3xl font-light max-sm:mx-auto">
+      <div class="max-sm:text-3xl font-light max-sm:mx-auto overflow-hidden">
         <div
           v-motion-slide-visible-right
           :delay="500"
@@ -75,8 +75,7 @@
     </div>
 
     <section>
-      <FooterSection/>
-
+      <FooterSection />
     </section>
   </div>
 </template>
@@ -85,7 +84,6 @@
 import { ref } from "vue";
 import FooterSection from "@/pages/FooterSection.vue";
 const images = require.context("@/assets/images", false, /\.jpg$/);
-
 
 const fwImages = ref([
   {
