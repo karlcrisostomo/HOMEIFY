@@ -17,8 +17,7 @@
           :class="{
             '  bg-white w-10 h-10 rounded-full flex justify-center items-center cursor-pointer  ':
               !isMenuOpen,
-            'cursor-pointer bg-black w-10 h-10 rounded-full -translate-x-2    ':
-              isMenuOpen,
+            'cursor-pointer bg-black w-10 h-10 rounded-full': isMenuOpen,
           }"
           @click="toggleMenu"
         >
