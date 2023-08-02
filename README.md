@@ -1,6 +1,6 @@
 # HOMEIFY Website
 
-<p align="center"><img src="../HOMEIFY/src/assets/Logo/logo.png"/></p>
+<img src="../HOMEIFY/src/assets/Logo/logo.png"/></p>
 
 ## Description
 
@@ -39,5 +39,3 @@ Let's work together to make Homeify the best platform for home improvement and i
 This project is licensed under the MIT License. See the [LICENSE](https://github.com/your-username/homeify/blob/main/LICENSE) file for details.
 
 ---
-
-Feel free to use this description as a starting point for your Homeify website's README.md. Make sure to replace the placeholders in square brackets with the appropriate URLs and customize the content to match the actual features and functionality of your website. Happy coding! 😊
