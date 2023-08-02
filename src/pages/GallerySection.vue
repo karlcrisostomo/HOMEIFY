@@ -8,7 +8,7 @@
         <h1 class="">Classic Furniture Collection</h1>
       </div>
       <div
-        class=" sm:grid sm:grid-cols-2 md:grid-cols-3 mt-40 sm:gap-5 lg:gap-5"
+        class="sm:grid sm:grid-cols-2 md:grid-cols-3 mt-40 sm:gap-5 lg:gap-5"
       >
         <figure
           v-motion-fade-visible
@@ -18,6 +18,7 @@
           @mouseenter="hoveredImgs = galleryImg.id"
           @mouseleave="hoveredImgs = null"
           class="hover:cursor-pointer mx-auto max-w-sm"
+          @click="$router.push({ name: 'error' })"
         >
           <div class="bg-black relative mb-8 sm:text-sm overflow-hidden">
             <div
