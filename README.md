@@ -31,7 +31,7 @@ We welcome contributions to enhance Homeify. To get started, follow these steps:
 4. Push your changes to your forked repository.
 5. Submit a pull request, and we will review your changes.
 
-Let's work together to make Homeify the best platform for home improvement and interior design enthusiasts! 🏡💻
+Let's work together to make Homeify the best platform for furniture shopping and home improvement enthusiasts! 🛋️
 
 ## License
 
