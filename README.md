@@ -1,6 +1,6 @@
 # HOMEIFY Website
 
-![Homeify Furniture Store Logo](./src/assets/Logo/logo.png)
+![Homeify Furniture Store Logo](./src/assets/Logo/isolated-layout.png)
 
 ## Description
 
