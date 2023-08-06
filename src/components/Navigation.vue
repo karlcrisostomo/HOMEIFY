@@ -21,7 +21,7 @@
           }"
           @click="toggleMenu"
         >
-          <div hovered="">
+          <div>
             <span
               :class="{
                 ' bg-white   rotate-45 translate-x-2 translate-y-5 transition-transform':
@@ -51,15 +51,15 @@
       <div
         :class="{
           '  hidden ': !isMenuOpen,
-          ' fixed  bg-white w-full h-full  z-30 text-5xl top-0 left-0  p-4  animate-in-circle-swoop   text-black ':
+          ' fixed  bg-white w-full  h-full max-sm:overflow-scroll   z-30 text-5xl top-0 left-0  p-4  animate-in-circle-swoop  text-black ':
             isMenuOpen,
         }"
       >
-        <div class="translate-y-32 container max-sm:max-w-sm">
-          <div class="grid sm:grid-cols-2">
+        <div class="mt-32 container max-sm:max-w-sm">
+          <div class="grid sm:grid-cols-2  ">
             <div class="flex">
               <div>
-                <h1 class="text-lg font-medium -rotate-90 mr-14">Menu</h1>
+                <h1 class="text-lg font-medium -rotate-90 mr-14 max-sm:mt-4">Menu</h1>
               </div>
               <div>
                 <ul>
@@ -69,7 +69,7 @@
                     @mouseover="hoveredItemId = navItem.id"
                     @mouseout="hoveredItemId = null"
                     :class="{
-                      'hover:translate-x-5 hover:transition-transform duration-500 max-sm:text-2xl sm:text-3xl  tracking-widest font-light  mb-20':
+                      'hover:translate-x-5 hover:transition-transform duration-500 max-sm:text-2xl sm:text-3xl  tracking-widest font-light  mb-20 ':
                         navItem.id,
                     }"
                   >

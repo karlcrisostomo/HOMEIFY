@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen">
+  <div class="">
     <div class="">
       <div class="max-sm:text-3xl font-light max-sm:mx-auto overflow-hidden">
         <div

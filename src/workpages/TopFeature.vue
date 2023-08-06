@@ -3,10 +3,11 @@
     class="bg-[url(../assets/images/works_bg.png)] bg-cover bg-center bg-no-repeat"
   >
     <div class="container mx-auto h-screen">
+      <Navigation />
       <div
-      v-motion-pop
-      :delay="500"
-        class="relative top-1/2 max-sm:leading-snug max-sm:text-5xl bg-black/50 max-sm:max-w-xs mx-auto p-2 sm:max-w-md sm:text-5.5xl md:max-w-lg sm:top-1/3 lg:text-6xl lg:max-w-xl"
+        v-motion-pop
+        :delay="500"
+        class="relative top-1/2 max-sm:top-1/4 max-sm:leading-snug max-sm:text-5xl bg-black/50 max-sm:max-w-xs mx-auto p-2 sm:max-w-md sm:text-5.5xl md:max-w-lg sm:top-1/3 lg:text-6xl lg:max-w-xl"
       >
         <h1 class="text-center font-bold font-Gupter tracking-wider">
           WELCOME TO HOMEIFY
@@ -26,8 +27,9 @@
 <script setup>
 import moment from "moment";
 import { computed, onMounted, ref } from "vue";
-
+import Navigation from "@/components/Navigation.vue";
 const time = ref(null);
+
 const UpdateTime = () => {
   time.value = moment().format("YYYY-MM-DD");
 };
