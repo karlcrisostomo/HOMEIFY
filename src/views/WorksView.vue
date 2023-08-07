@@ -3,8 +3,6 @@
     :class="{ 'text-white w-full h-screen': !isMenuOpen }"
     ref="containerRef"
   >
-    
-
     <component :is="TopFeature" />
     <component :is="HeroSection" />
   </div>
