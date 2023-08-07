@@ -10,7 +10,7 @@
       </div>
 
       <div class="flex items-center gap-4 z-50 -mt-2">
-        <h1 :class="{ 'text-black ': isMenuOpen }">
+        <h1 class="max-sm:hidden" :class="{ 'text-black ': isMenuOpen }">
           {{ isMenuOpen ? "Close" : "Menu" }}
         </h1>
         <div
@@ -51,15 +51,17 @@
       <div
         :class="{
           '  hidden ': !isMenuOpen,
-          ' fixed  bg-white w-full  h-full max-sm:overflow-scroll   z-30 text-5xl top-0 left-0  p-4  animate-in-circle-swoop  text-black ':
+          ' absolute  bg-white w-full  h-full max-sm:overflow-y-auto max-sm:overflow-scroll  z-30 text-5xl top-0 left-0  p-4  animate-in-circle-swoop  text-black ':
             isMenuOpen,
         }"
       >
         <div class="mt-32 container max-sm:max-w-sm">
-          <div class="grid sm:grid-cols-2  ">
+          <div class="grid sm:grid-cols-2">
             <div class="flex">
               <div>
-                <h1 class="text-lg font-medium -rotate-90 mr-14 max-sm:mt-4">Menu</h1>
+                <h1 class="text-lg font-medium -rotate-90 mr-14 max-sm:mt-4">
+                  Menu
+                </h1>
               </div>
               <div>
                 <ul>
