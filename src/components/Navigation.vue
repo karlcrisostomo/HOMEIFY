@@ -51,15 +51,17 @@
       <div
         :class="{
           '  hidden ': !isMenuOpen,
-          ' absolute  bg-white w-full  h-full max-sm:overflow-y-auto max-sm:overflow-scroll  z-30 text-5xl top-0 left-0  p-4  animate-in-circle-swoop  text-black ':
+          ' absolute   bg-white w-full h-full z-30 text-5xl top-0 left-0  p-4  animate-in-circle-swoop  text-black ':
             isMenuOpen,
         }"
       >
-        <div class="mt-32 container max-sm:max-w-sm">
-          <div class="grid sm:grid-cols-2">
-            <div class="flex">
+        <div class="mt-28 max-sm:mt-20 container max-sm:max-w-xs  mx-auto">
+          <div class="grid sm:grid-cols-2 max-sm:block max-sm:p-12">
+            <div class="sm:flex">
               <div>
-                <h1 class="text-lg font-medium -rotate-90 mr-14 max-sm:mt-4">
+                <h1
+                  class="text-lg font-medium max-sm:text-base text-silver-sand sm:text-black max-sm:lowercase sm:-rotate-90 mr-14 sm:max-sm:mt-4 max-sm:mb-12"
+                >
                   Menu
                 </h1>
               </div>
@@ -71,7 +73,7 @@
                     @mouseover="hoveredItemId = navItem.id"
                     @mouseout="hoveredItemId = null"
                     :class="{
-                      'hover:translate-x-5 hover:transition-transform duration-500 max-sm:text-2xl sm:text-3xl  tracking-widest font-light  mb-20 ':
+                      'hover:translate-x-5 hover:transition-transform duration-500 max-sm:text-3xl sm:text-3xl  max-sm:tracking-wider  md:tracking-widest text-custom-black  font-light max-sm:mb-11 sm:mb-16 md:mb-20  ':
                         navItem.id,
                     }"
                   >
@@ -91,7 +93,14 @@
                 </ul>
               </div>
             </div>
-            <section class="relative max-sm:max-w-xs m-auto">
+
+            <div class="text-base sm:hidden max-w-xs mx-auto">
+              <h1 class="pb-4 text-silver-sand">Get in touch</h1>
+              <span class="border-b-2"
+                ><a href="mailto:">Homeify@email.com</a></span
+              >
+            </div>
+            <section class="max-sm:max-w-xs m-auto max-sm:hidden">
               <div class="text-sm ml-2 leading-loose">
                 <div class="mb-12">
                   <h1 class="text-lg text-gray-400">Philippines</h1>
@@ -126,9 +135,9 @@
 <script>
 import { ref, reactive } from "vue";
 import { isMenuOpen, toggleMenu } from "../composables/menu";
-
 export default {
   setup() {
+    const isMobile = ref(false);
     const hoveredItemId = ref(null);
     const navLists = reactive([
       { id: 1, name: "Home", path: "/" },
