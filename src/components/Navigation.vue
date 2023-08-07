@@ -97,7 +97,7 @@
             <div class="text-base sm:hidden max-w-xs mx-auto">
               <h1 class="pb-4 text-silver-sand">Get in touch</h1>
               <span class="border-b-2"
-                ><a href="mailto:">Homeify@email.com</a></span
+                ><a href="mailto:Homeify@email.com">Homeify@email.com</a></span
               >
             </div>
             <section class="max-sm:max-w-xs m-auto max-sm:hidden">
