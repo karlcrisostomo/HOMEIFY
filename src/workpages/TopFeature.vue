@@ -2,8 +2,8 @@
   <div
     class="bg-[url(../assets/images/works_bg.png)] bg-cover bg-center bg-no-repeat"
   >
-    <div class="container mx-auto h-screen">
-      <Navigation />
+    <div class="container mx-auto h-screen ">
+      <Navigation class="" />
       <div
         v-motion-pop
         :delay="500"

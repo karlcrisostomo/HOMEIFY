@@ -16,7 +16,8 @@ export default {
         0.5: "0.15rem",
       },
       colors: {
-        "silver-sand": "#CECECE",
+        "silver-sand": "#C6C6C6",
+        "custom-black" : "#333333",
         "pale-blue": "#B1E5F2",
         "Ocean-Blue": "#1E4C92",
         "Electric-Purple": "#F05CF0",
